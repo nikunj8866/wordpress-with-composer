@@ -23,7 +23,7 @@
 define( 'DB_NAME', 'wp_vendor' );
 
 /** MySQL database username */
-define( 'DB_USER', '' );
+define( 'DB_USER', 'root' );
 
 /** MySQL database password */
 define( 'DB_PASSWORD', '' );
@@ -40,9 +40,9 @@ define( 'DB_COLLATE', '' );
 // ========================
 // Custom Content Directory
 // ========================
-define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
-define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
 
+define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
+define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/wordpress-with-composer/content' );
 /**#@+
  * Authentication Unique Keys and Salts.
  *

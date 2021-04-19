@@ -1,5 +1,13 @@
 {
   "repositories": [
+	{
+            "type":"composer",
+            "url":"https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        },
         {
             "type": "package",
             "package": {
@@ -17,10 +25,14 @@
         }
     ],
     "require": {
-        "wordpress/wordpress": "5.7.1"
+        "wordpress/wordpress": "5.7.1",
+	"wpackagist-plugin/advanced-custom-fields":"5.9.5"
     },
    "extra": {
+	"installer-paths": {
+            "content/plugins/{$name}/": ["type:wordpress-plugin"]
+        },
         "webroot-dir": "wp",
-        "webroot-package": "wordpress/wordpress"
+        "webroot-package": "wordpress/wordpress"	
     }
 }

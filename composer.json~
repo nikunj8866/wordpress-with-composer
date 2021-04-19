@@ -1,0 +1,30 @@
+{
+  "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "wordpress/wordpress",
+                "type": "webroot",
+                "version": "5.7.1",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/WordPress/WordPress/archive/refs/tags/5.7.1.zip"
+                },
+                "require": {
+                    "fancyguy/webroot-installer": "^1.0"
+                }
+            }
+        }
+    ],
+    "require": {
+        "wordpress/wordpress": "5.7.1",
+	"wpackagist-plugin/advanced-custom-fields":"5.9.5"
+    },
+   "extra": {
+	"installer-paths": {
+            "content/plugins/{$name}/": ["type:wordpress-plugin"]
+        },
+        "webroot-dir": "wp",
+        "webroot-package": "wordpress/wordpress"	
+    }
+}

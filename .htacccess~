@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /wordpress-with-composer/wp/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /wordpress-with-composer/index.php [L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+
